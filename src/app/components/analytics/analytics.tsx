@@ -1,5 +1,6 @@
 import React from "react";
 import MultiLineChart from "./line";
+import BarChart from "./bar";
 
 function Analytics() {
   const sampleData = [
@@ -34,7 +35,7 @@ function Analytics() {
 
   const sampleData2 = [
     {
-      name: "Dataset 1",
+      name: "Grammar",
       values: [
         { date: "2025-01-01", value: 45 },
         { date: "2025-01-02", value: 80 },
@@ -43,7 +44,7 @@ function Analytics() {
       ],
     },
     {
-      name: "Dataset 2",
+      name: "Fluency",
       values: [
         { date: "2025-01-01", value: 50 },
         { date: "2025-01-02", value: 67 },
@@ -52,7 +53,7 @@ function Analytics() {
       ],
     },
     {
-      name: "Dataset 2",
+      name: "Confidence",
       values: [
         { date: "2025-01-01", value: 10 },
         { date: "2025-01-02", value: 40 },
@@ -64,13 +65,13 @@ function Analytics() {
 
   return (
     <div className="flex place-content-center place-items-center w-full">
-      <div className="flex items-center justify-between w-[99%]">
+      <div className="flex items-center justify-between h-auto">
         <div className="flex-col place-content-center place-items-center">
           <div className="flex place-content-center place-items-center p-2 rounded-xl w-auto shadow-lg">
             <MultiLineChart data={sampleData} />
           </div>
           <div className="flex place-content-center place-items-center p-2 rounded-xl w-auto shadow-lg">
-            <MultiLineChart data={sampleData2} />
+            <BarChart data={sampleData2} />
           </div>
         </div>
       </div>
