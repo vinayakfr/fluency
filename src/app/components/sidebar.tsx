@@ -5,12 +5,13 @@ import { MdOutlineAnalytics } from "react-icons/md";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 import { IoIosHelpCircleOutline } from "react-icons/io";
+import Link from "next/link";
 
 function Sidebar() {
   return (
     <div className="flex flex-col gap-20 place-content-start place-items-center bg-transparent pr-4 pl-4 py-24 !bg-black rounded-2xl">
       <div className="grid grid-cols-1 grid-rows-3 gap-y-10 place-content-center items-center">
-        <a href="/" className="group flex items-center">
+        <Link href="/" className="group flex items-center">
           <LuLayoutDashboard size={40} color="white" />
           {/* <LuLayoutDashboard size={40} color="white" className="hidden dark:block"/> */}
           <p
@@ -19,7 +20,7 @@ function Sidebar() {
           >
             Dashboard
           </p>
-        </a>
+        </Link>
         <button className="group flex items-center">
           <MdOutlineDriveFolderUpload size={40} color="white" />
           {/* <MdOutlineDriveFolderUpload size={40} color="white" className="hidden dark:block"/> */}
@@ -30,7 +31,7 @@ function Sidebar() {
             Upload
           </p>
         </button>
-        <a href="/analytics" className="group flex items-center">
+        <Link href="/analytics" className="group flex items-center">
           <MdOutlineAnalytics size={40} color="white" />
           {/* <MdOutlineAnalytics size={40} color="white" className="hidden dark:block"/> */}
           <p
@@ -39,7 +40,7 @@ function Sidebar() {
           >
             Analytics
           </p>
-        </a>
+        </Link>
         <button className="group flex items-center">
           <MdOutlineCalendarMonth size={40} color="white" />
           {/* <MdOutlineCalendarMonth size={40} color="whiblacke" className="hidden dark:block"/> */}

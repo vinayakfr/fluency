@@ -73,7 +73,11 @@ const BarChart: React.FC<BarChartProps> = ({
     chart
       .append("g")
       .attr("transform", `translate(0, ${innerHeight})`)
-      .call(d3.axisBottom(x0Scale).tickFormat(d3.timeFormat("%b %d") as any))
+      .call(
+        d3.axisBottom(x0Scale).tickFormat(
+          d3.timeFormat("%b %d") as unknown as (domainValue: string) => string
+        )
+      )
       .selectAll("text")
       .attr("transform", "rotate(-45)")
       .style("text-anchor", "end")

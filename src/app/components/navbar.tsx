@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 function Navbar() {
@@ -9,10 +10,12 @@ function Navbar() {
         </button>
         <div className="flex items-center gap-5">
           <p className="text-2xl font-medium text-white ">Vinayak Srivastava</p>
-          <img
-            src="avatar.jpg"
-            alt="profile"
-            className="rounded-full h-14 w-14"
+          <Image
+            width={40}
+            height={40}
+            src={"/avatar.jpg"}
+            alt={"avatar"}
+            className="rounded-full"
           />
         </div>
       </nav>
