@@ -69,7 +69,13 @@ const MultiLineChart: React.FC<MultiLineChartProps> = ({
     chart
       .append("g")
       .attr("transform", `translate(0, ${innerHeight})`)
-      .call(d3.axisBottom(xScale).tickFormat(d3.timeFormat("%b %d") as any))
+      .call(
+        d3
+          .axisBottom(xScale)
+          .tickFormat((domainValue) =>
+            d3.timeFormat("%b %d")(domainValue as Date)
+          )
+      )
       .selectAll("text")
       .attr("transform", "rotate(-45)")
       .style("text-anchor", "end")
