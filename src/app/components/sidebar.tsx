@@ -1,15 +1,24 @@
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MdOutlineDriveFolderUpload } from "react-icons/md";
 import { MdOutlineAnalytics } from "react-icons/md";
 import { MdOutlineCalendarMonth } from "react-icons/md";
 import { IoMdSettings } from "react-icons/io";
 import { IoIosHelpCircleOutline } from "react-icons/io";
+import { GiHamburgerMenu } from "react-icons/gi";
 import Link from "next/link";
 
 function Sidebar() {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleSidebar() {
+    setIsOpen(!isOpen);
+  }
+
   return (
-    <div className="flex flex-col gap-20 place-content-start place-items-center bg-transparent pr-4 pl-4 py-24 !bg-black rounded-2xl">
+    <div className="flex flex-col gap-20 place-content-start place-items-center bg-transparent pr-4 pl-4 py-24 !bg-black rounded-2xl h-full">
       <div className="grid grid-cols-1 grid-rows-3 gap-y-10 place-content-center items-center">
         <Link href="/" className="group flex items-center">
           <LuLayoutDashboard size={40} color="white" />

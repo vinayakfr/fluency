@@ -3,7 +3,7 @@ import Button from "./button";
 
 function Premium() {
   return (
-    <div className="flex flex-col place-content-end place-items-end w-[30%]">
+    <div className="flex flex-col place-content-end place-items-end xl:w-[30%]">
       <div className="flex flex-col gap-5 place-content-start p-3 rounded-xl bg-white/15">
         <div className="flex flex-col gap-2 place-content-start w-full">
           <h1 className="text-4xl font-bold text-blue-500">
