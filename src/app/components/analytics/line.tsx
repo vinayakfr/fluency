@@ -22,7 +22,7 @@ interface MultiLineChartProps {
 
 const MultiLineChart: React.FC<MultiLineChartProps> = ({
   data,
-  width = 1320,
+  width = 1300,
   height = 200,
 }) => {
   const svgRef = useRef<SVGSVGElement | null>(null);
